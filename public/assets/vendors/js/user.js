@@ -63,10 +63,8 @@ $.ajax({
     type: 'GET',
     url: '/users',
     success: function (response) {
-        // console.log(response);
-
         var html = template('userTpl', {
-            data: response,
+            data: response
         })
         $('#userBox').html(html)
     }
@@ -74,12 +72,7 @@ $.ajax({
 
 //表单渲染
 $('#userBox').on('click', '.edit', function () {
-    // console.log(1);
-    console.log($(this));
-
     var id = $(this).attr('id')
-    // console.log(id);
-
     $.ajax({
         type: 'PUT',
         url: '/users/' + id,

@@ -4,8 +4,8 @@ $('#modifyForm').on('submit', function () {
         url: '/users/password',
         type: 'PUT',
         data: formData,
-        succsee: function (data) {
-            location.href = "admin/login.html"
+        success: function (data) {
+            location.href = "/admin/login.html"
         }
     })
     return false
